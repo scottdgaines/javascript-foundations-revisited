@@ -3,7 +3,8 @@ class Hobbit{
     this.name = name || 'unknown',
     this.age = age || 0,
     this.isAdult = false,
-    this.isOld = false
+    this.isOld = false,
+    this.acquaintances = []
   }
 }
 
@@ -33,10 +34,30 @@ const getRing = (hobbit) => {
   }
 }
 
+const meetPeople = (hobbit, people) => {
+  people.forEach(person => {
+    hobbit.acquaintances.push(person)
+  })
+
+  return hobbit
+}
+
+const findFriends = (hobbit) => {
+  return hobbit.acquaintances.reduce((friends, person) => {
+    if (person.relationship === "friend") {
+      friends.push(person.name)
+    }
+    return friends
+  }, [])
+  
+  
+ 
+}
+
 module.exports = {
   createHobbit,
   celebrateBirthday,
   getRing,
-  // meetPeople, 
-  // findFriends
+  meetPeople, 
+  findFriends
 }
