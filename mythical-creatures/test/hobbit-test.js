@@ -14,13 +14,13 @@ describe('Hobbit', function() {
     assert.equal(mark.age, 5);
   });
 
-  it.skip('should start out 0 years old if not specified', function() {
+  it('should start out 0 years old if not specified', function() {
     var bilbo = createHobbit('Bilbo');
 
     assert.equal(bilbo.age, 0);
   });
 
-  it.skip('should return an object with defaults if nothing passed', function() {
+  it('should return an object with defaults if nothing passed', function() {
     var hobbit = createHobbit();
 
     assert.equal(hobbit.name, 'unknown');
