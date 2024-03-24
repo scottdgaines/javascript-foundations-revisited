@@ -24,13 +24,13 @@ describe('Vampire', function() {
     assert.equal(vampira.pet, 'armadillo');
   });
 
-  it.skip('should be thirsty', function() {
+  it('should be thirsty', function() {
     var vampire = createVampire('Andy');
 
     assert.equal(vampire.thirsty, true);
   });
 
-  it.skip('should shout at victim when thirsty', function() {
+  it('should shout at victim when thirsty', function() {
     var vampire = createVampire('Andy');
     var expectedResponse = 'I WANT TO SUCK YOUR BLOOD!'
 
@@ -39,7 +39,7 @@ describe('Vampire', function() {
     assert.equal(shout, expectedResponse);
   });
 
-  it.skip('should start with no ounces of blood drank', function() {
+  it('should start with no ounces of blood drank', function() {
     assert.equal(createVampire('Bobby').ouncesDrank, 0);
   });
 
