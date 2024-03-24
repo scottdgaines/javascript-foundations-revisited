@@ -43,7 +43,7 @@ describe('Vampire', function() {
     assert.equal(createVampire('Bobby').ouncesDrank, 0);
   });
 
-  it.skip('should drink 10 ounces of blood at a time', function() {
+  it('should drink 10 ounces of blood at a time', function() {
     var vampire = createVampire('Margot');
 
     var drankOnceVamp = drink(vampire);
@@ -59,7 +59,7 @@ describe('Vampire', function() {
     assert.equal(drankThriceVamp.ouncesDrank, 30);
   });
 
-  it.skip('should no longer be thirsty after drinking 50 ounces', function() {
+  it('should no longer be thirsty after drinking 50 ounces', function() {
     var vampire = createVampire('Javi');
 
     var drankOnceVamp = drink(vampire);
@@ -72,7 +72,7 @@ describe('Vampire', function() {
     assert.equal(drank5xsVamp.thirsty, false);
   });
 
-  it.skip('should not drink more ounces when not thirsty', function() {
+  it('should not drink more ounces when not thirsty', function() {
     var vampire = createVampire('Javi');
 
     var drankOnceVamp = drink(vampire);
@@ -89,7 +89,7 @@ describe('Vampire', function() {
     assert.equal(notDrinking6xsVamp.ouncesDrank, 50);
   });
 
-  it.skip('should refuse blood from victim when not thirsty', function() {
+  it('should refuse blood from victim when not thirsty', function() {
     var vampire = createVampire('Javi');
 
     var drankOnceVamp = drink(vampire);
@@ -104,7 +104,7 @@ describe('Vampire', function() {
     assert.equal(encounterDeliciousVictim(drank5xsVamp), `No thanks, I am too full.`);
   });
 
-  it.skip('should say if its been to a location', function() {
+  it('should say if its been to a location', function() {
     var locations = ['Transylvania', 'Washington', 'New Orleans', 'Mystic Falls'];
 
     var response = inquirePlace(locations, 'New Orleans');
