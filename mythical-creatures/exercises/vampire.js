@@ -29,10 +29,30 @@ const drink = (vampire) => {
   return vampire
 }
 
+const inquirePlace = (locations, targetLocation) => {
+  const location = locations.find(city => {
+    return city == targetLocation
+  })
+
+  if (location) {
+    return `Yes, I have spent some time in ${location}.`
+  } else {
+    return `No, I have never been to ${targetLocation}.`
+  }
+}
+
+const findBatLovers = (vampires) => {
+  return vampires.filter(vamp => {
+    return vamp.pet == 'bat'
+    }).map(vampire => {
+      return vampire.name
+  })
+}
+
 module.exports = {
   createVampire, 
   drink, 
-  // findBatLovers, 
+  findBatLovers, 
   encounterDeliciousVictim, 
-  // inquirePlace
+  inquirePlace
 }

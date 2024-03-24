@@ -113,7 +113,7 @@ describe('Vampire', function() {
     assert.deepEqual(response, expectedResponse);
   });
 
-  it.skip('should say if its not been to a location', function() {
+  it('should say if its not been to a location', function() {
     var locations = ['Transylvania', 'Washington', 'New Orleans', 'Mystic Falls'];
 
     var response = inquirePlace(locations, 'Idaho');
@@ -122,7 +122,7 @@ describe('Vampire', function() {
     assert.deepEqual(response, expectedResponse);
   });
 
-  it.skip('should be able to find the vampires with bats', function() {
+  it('should be able to find the vampires with bats', function() {
     var javi = createVampire('Javi');
     var brittany = createVampire('Brittany');
     var jeff = createVampire('Jeff', 'fox');
