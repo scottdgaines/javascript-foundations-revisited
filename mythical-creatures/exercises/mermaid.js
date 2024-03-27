@@ -1,20 +1,22 @@
-const { createSidekick } = require('/sidekick')
+const { createSidekick } = require('./sidekick.js')
 
 class Mermaid{
-    constructor(name, friendName) {
+    constructor(name) {
         this.name = name,
         this.fins = true,
-        this.friend = {
-            name: friendName
-        }
+        this.sidekick = null
+    }
+
+    instantiateSidekick(name, species) {
+        const sidekick = createSidekick(name, species)
+        this.sidekick = sidekick
+        return sidekick
     }
 }
 
 const createMermaid = (name) => {
-    return new Mermaid(name, friendName)
+    return new Mermaid(name)
 }
-
-const createFr
 
 module.exports = {
     createMermaid,
