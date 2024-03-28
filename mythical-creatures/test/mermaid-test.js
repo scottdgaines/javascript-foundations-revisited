@@ -59,4 +59,15 @@ describe('Mermad', function() {
         assert.equal(mermaid.collection[0], 'Snarfblat')
     })
 
+    it('Should only be able to have 3 objects in her collection', function() {
+        const mermaid = createMermaid('Ariel')
+
+        mermaid.addToCollection('Snarfblat')
+        mermaid.addToCollection('Dinglehopper')
+
+        assert.equal(mermaid.addToCollection('thingamabob'), 'I need to go explore more shipwrecks!')
+        assert.equal(mermaid.collection.length, 3)
+        assert.equal(mermaid.addToCollection('Gizmo'), 'That\'s aplenty!')
+        assert.equal(mermaid.collection.length, 3)
+    })
 })

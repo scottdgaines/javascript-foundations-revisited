@@ -15,7 +15,12 @@ class Mermaid{
     }
 
     addToCollection(object) {
-        this.collection.push(object)
+        if (this.collection.length < 3) {
+            this.collection.push(object)
+            return 'I need to go explore more shipwrecks!'
+        } else if (this.collection.length == 3) {
+            return 'That\'s aplenty!'
+        }
     }
 }
 
