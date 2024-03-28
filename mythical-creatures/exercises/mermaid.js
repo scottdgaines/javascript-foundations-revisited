@@ -12,6 +12,8 @@ class Mermaid{
         this.sidekick = sidekick
         return sidekick
     }
+
+    
 }
 
 const createMermaid = (name) => {
@@ -21,6 +23,5 @@ const createMermaid = (name) => {
 module.exports = {
     createMermaid,
     createSidekick
-    // addToCollection,
     // sing
 }
