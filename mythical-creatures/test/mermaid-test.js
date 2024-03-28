@@ -33,23 +33,29 @@ describe('Mermad', function() {
         assert.equal(mermaid.sidekick.species, 'Fish')
     })
 
-    it.skip('Should be able to add things to her collection', function() {
+    it('Should have an empty collection by default', function() {
+        const mermaid = createMermaid('Ariel')
+
+        assert.equal(mermaid.collection.length, 0)
+    })
+
+    it('Should be able to add things to her collection', function() {
         const mermaid = createMermaid('Ariel')
 
         mermaid.addToCollection('Fork')
 
-        assert.includes(mermaid.collection, 'Fork')
+        assert.equal(mermaid.collection[0], 'Fork')
         assert.equal(mermaid.collection.length, 1)
     })
 
-    it.skip('Should be able to add multiple things to her collection', function() {
+    it('Should be able to add multiple things to her collection', function() {
         const mermaid = createMermaid('Ariel')
 
-        mermaid.addToCollection('Snarblat')
+        mermaid.addToCollection('Snarfblat')
         mermaid.addToCollection('Dinglehopper')
         mermaid.addToCollection('Thingamabob')
 
-        assert.equal(mermaid.collection, 3)
+        assert.equal(mermaid.collection.length, 3)
         assert.equal(mermaid.collection[0], 'Snarfblat')
     })
 

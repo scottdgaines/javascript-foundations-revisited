@@ -4,7 +4,8 @@ class Mermaid{
     constructor(name) {
         this.name = name,
         this.fins = true,
-        this.sidekick = null
+        this.sidekick = null,
+        this.collection = []
     }
 
     instantiateSidekick(name, species) {
@@ -13,7 +14,9 @@ class Mermaid{
         return sidekick
     }
 
-    
+    addToCollection(object) {
+        this.collection.push(object)
+    }
 }
 
 const createMermaid = (name) => {
