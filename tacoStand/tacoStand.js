@@ -1,7 +1,7 @@
 class Ingredient {
     constructor(ingredient, price) {
-        this.name = ingredient,
-        this.price = price
+        this.name = ingredient || 'unknown'
+        this.price = price || 0.00
     }
 }
 
