@@ -27,9 +27,18 @@ const addIngredientToTaco = (taco, newIngredient) => {
     return taco
 }
 
+const calculatePrice = (taco) => {
+    let sum = 0
+    taco.ingredients.forEach(item => {
+        sum = sum + item.price
+    })
+    return sum
+}
+
 
 module.exports = {
     createIngredient, 
     createTaco,
-    addIngredientToTaco
+    addIngredientToTaco,
+    calculatePrice
 }

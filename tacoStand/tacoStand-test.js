@@ -60,7 +60,7 @@ describe('taco stand', function() {
       assert.deepEqual(lettuceAddedTaco.ingredients, [steak, lettuce])
     })
 
-    it.skip('should return the taco unchanged if no ingredient is included', function() {
+    it('should return the taco unchanged if no ingredient is included', function() {
       var steak = createIngredient('steak', 3.50)
       var basicSteakTaco = createTaco('basic steak', [steak])
 
@@ -71,7 +71,7 @@ describe('taco stand', function() {
   })
 
   describe('calculatePrice', function() {
-    it.skip('should calculate the price of a single ingredient taco', function() {
+    it('should calculate the price of a single ingredient taco', function() {
       var steak = createIngredient('steak', 3.50)
       var basicSteakTaco = createTaco('basic steak', [steak])
 
