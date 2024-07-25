@@ -5,11 +5,24 @@ class Ingredient {
     }
 }
 
+class Taco {
+    constructor(name) {
+        this.name = name || 'custom'
+    }
+}
+
 const createIngredient = (ingredient, price) => {
-    const taco = new Ingredient(ingredient, price)
-    console.log(taco)
+    const ingr = new Ingredient(ingredient, price)
+    return ingr
+}
+
+const createTaco = (name) => {
+    const taco = new Taco(name)
     return taco
 }
 
 
-module.exports = {createIngredient}
+module.exports = {
+    createIngredient, 
+    createTaco
+}

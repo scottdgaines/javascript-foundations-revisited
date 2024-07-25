@@ -22,12 +22,12 @@ describe('taco stand', function() {
   })
 
   describe('createTaco', function() {
-    it.skip('should have a name', function() {
+    it('should have a name', function() {
 
       assert.equal(createTaco('southwestern').name, 'southwestern')
     })
 
-    it.skip('should have a default name if none provided', function() {
+    it('should have a default name if none provided', function() {
 
       assert.equal(createTaco().name, 'custom')
     })
