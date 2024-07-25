@@ -32,7 +32,7 @@ describe('taco stand', function() {
       assert.equal(createTaco().name, 'custom')
     })
 
-    it.skip('should have no ingredients by default', function() {
+    it('should have no ingredients by default', function() {
 
       assert.deepEqual(createTaco('baja').ingredients, [])
     })

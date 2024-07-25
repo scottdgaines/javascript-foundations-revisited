@@ -7,7 +7,8 @@ class Ingredient {
 
 class Taco {
     constructor(name) {
-        this.name = name || 'custom'
+        this.name = name || 'custom',
+        this.ingredients = []
     }
 }
 
