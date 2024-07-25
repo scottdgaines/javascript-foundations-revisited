@@ -6,9 +6,9 @@ class Ingredient {
 }
 
 class Taco {
-    constructor(name) {
+    constructor(name, ingredients) {
         this.name = name || 'custom',
-        this.ingredients = []
+        this.ingredients = ingredients || []
     }
 }
 
@@ -17,8 +17,8 @@ const createIngredient = (ingredient, price) => {
     return ingr
 }
 
-const createTaco = (name) => {
-    const taco = new Taco(name)
+const createTaco = (name, incredients) => {
+    const taco = new Taco(name, incredients)
     return taco
 }
 

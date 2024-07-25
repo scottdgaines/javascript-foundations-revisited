@@ -37,7 +37,7 @@ describe('taco stand', function() {
       assert.deepEqual(createTaco('baja').ingredients, [])
     })
 
-    it.skip('should be able to create a taco with ingredients', function() {
+    it('should be able to create a taco with ingredients', function() {
       var fish = createIngredient('fish', 2.95)
       var hotSauce = createIngredient('siracha mayo', 0.95)
       var lettuce = createIngredient('lettuce', 0.50)
