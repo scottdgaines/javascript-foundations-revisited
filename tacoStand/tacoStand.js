@@ -22,8 +22,14 @@ const createTaco = (name, incredients) => {
     return taco
 }
 
+const addIngredientToTaco = (taco, newIngredient) => {
+    taco.ingredients.push(newIngredient)
+    return taco
+}
+
 
 module.exports = {
     createIngredient, 
-    createTaco
+    createTaco,
+    addIngredientToTaco
 }

@@ -50,13 +50,13 @@ describe('taco stand', function() {
   })
 
   describe('addIngredientToTaco', function() {
-    it.skip('should be able to add an ingredient to a taco', function() {
+    it('should be able to add an ingredient to a taco', function() {
       var steak = createIngredient('steak', 3.50)
       var basicSteakTaco = createTaco('basic steak', [steak])
 
       var lettuce = createIngredient('lettuce', 0.50)
       var lettuceAddedTaco = addIngredientToTaco(basicSteakTaco, lettuce)
-
+      
       assert.deepEqual(lettuceAddedTaco.ingredients, [steak, lettuce])
     })
 
