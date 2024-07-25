@@ -78,7 +78,7 @@ describe('taco stand', function() {
       assert.equal(calculatePrice(basicSteakTaco), 3.50)
     })
 
-    it.skip('should calculate the price of a 2 ingredient taco', function() {
+    it('should calculate the price of a 2 ingredient taco', function() {
       var steak = createIngredient('steak', 3.50)
       var lettuce = createIngredient('lettuce', 0.50)
       var steakTaco = createTaco('steak', [steak, lettuce])
@@ -86,7 +86,7 @@ describe('taco stand', function() {
       assert.equal(calculatePrice(steakTaco), 4.00)
     })
 
-    it.skip('should calculate the price of a many ingredient taco', function() {
+    it('should calculate the price of a many ingredient taco', function() {
       var steak = createIngredient('steak', 3.50)
       var lettuce = createIngredient('lettuce', 0.50)
       var hotSauce = createIngredient('siracha mayo', 0.95)
