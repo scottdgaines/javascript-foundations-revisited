@@ -25,8 +25,18 @@ const createLevel = (name, players) => {
     return level
 }
 
+const findCoins = (level, count) => {
+    level.coins = count
+    
+    if (level.coins >= 100) {
+        level.lives = level.lives + 1
+    } 
+
+    return level
+}
 
 module.exports = {
     createPlayer,
-    createLevel
+    createLevel,
+    findCoins
 };

@@ -1,4 +1,4 @@
-var { createPlayer, createLevel } = require('./video-games');
+var { createPlayer, createLevel, findCoins } = require('./video-games');
 var assert = require('chai').assert;
 
 describe('video games', function () {
@@ -60,7 +60,7 @@ describe('video games', function () {
       assert.equal(level.lives, 3);
    });
 
-   it.skip('should be able to collect coins', function () {
+   it('should be able to collect coins', function () {
       var player1 = createPlayer('The Timeless Troubadour', 500, ['piano sonata', 'violin concerto', 'fllamenco guitar']);
       var level = createLevel('Infernal Inferno of Flames', [player1]);
 
@@ -73,7 +73,7 @@ describe('video games', function () {
       assert.equal(updatedLevel.coins, 5);
    });
 
-   it.skip('should add a life when 100 coins are collected', function () {
+   it('should add a life when 100 coins are collected', function () {
       var player1 = createPlayer('The Fiery Friar', 50, ['flame spin', 'fire dance', 'smoke screen']);
       var level = createLevel('Water Temple', [player1]);
 
