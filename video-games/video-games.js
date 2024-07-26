@@ -7,8 +7,9 @@ class Player {
 }
 
 class Level {
-    constructor(name) {
-        this.name = name
+    constructor(name, players) {
+        this.name = name,
+        this.players = players
     }
 }
 
@@ -17,8 +18,8 @@ const createPlayer = (name, age, move) => {
     return player
 }
 
-const createLevel = (name) => {
-    const level = new Level(name)
+const createLevel = (name, players) => {
+    const level = new Level(name, players)
     return level
 }
 
