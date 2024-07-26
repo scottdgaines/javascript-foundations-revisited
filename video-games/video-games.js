@@ -1,12 +1,13 @@
 class Player {
-    constructor(name, age) {
+    constructor(name, age, move) {
         this.name = name,
-        this.age = age
+        this.age = age,
+        this.moveset = move
     }
 }
 
-const createPlayer = (name, age) => {
-    const player = new Player(name, age)
+const createPlayer = (name, age, move) => {
+    const player = new Player(name, age, move)
     return player
 }
 
