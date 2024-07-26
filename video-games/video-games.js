@@ -9,7 +9,9 @@ class Player {
 class Level {
     constructor(name, players) {
         this.name = name,
-        this.players = players
+        this.players = players,
+        this.coins = 0,
+        this.lives = 3
     }
 }
 
