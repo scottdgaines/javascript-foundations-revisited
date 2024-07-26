@@ -6,10 +6,24 @@ class Player {
     }
 }
 
+class Level {
+    constructor(name) {
+        this.name = name
+    }
+}
+
 const createPlayer = (name, age, move) => {
     const player = new Player(name, age, move)
     return player
 }
 
+const createLevel = (name) => {
+    const level = new Level(name)
+    return level
+}
 
-module.exports = {createPlayer };
+
+module.exports = {
+    createPlayer,
+    createLevel
+};
