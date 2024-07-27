@@ -29,10 +29,22 @@ const makePlaylist = (title, songList) => {
   return playlist
 }
 
+const addSongToPlaylist = (playlist, newSong) => {
+  playlist.songs.push(newSong)
+  return playlist
+}
+
+const playSongs = (playlist) => {
+  playlist.songs.forEach(song => {
+    song.hasBeenPlayed = true 
+  })
+  return playlist
+}
+
 module.exports = { 
   createSong, 
   playSong, 
   makePlaylist, 
-  // addSongToPlaylist, 
-  // playSongs
+  addSongToPlaylist, 
+  playSongs
 };
