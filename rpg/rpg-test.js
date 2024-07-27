@@ -2,7 +2,7 @@ var assert = require('chai').assert;
 var { createMage, createEnemy, castSpell, castUltimate } = require('./rpg.js');
 
 describe('rpg', function() {
-  it.skip('should create a mage with health and magic points', function() {
+  it('should create a mage with health and magic points', function() {
     var mage1 = createMage(10, 20);
     var mage2 = createMage(50, 80);
 
@@ -13,7 +13,7 @@ describe('rpg', function() {
     assert.equal(mage2.magic, 80)
   });
   
-  it.skip('should create an enemy monster with a name and health points', function() {
+  it('should create an enemy monster with a name and health points', function() {
     var imp = createEnemy('imp', 20);
     var dragon = createEnemy('dragon', 100);
     
