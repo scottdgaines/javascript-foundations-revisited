@@ -78,7 +78,7 @@ describe('dj', function() {
       assert.equal(updatedHolidayPlaylist.songs[2].hasBeenPlayed, true)
    })
 
-   it.skip('should play only the favorite songs when "favorites only" is specified', function() {
+   it('should play only the favorite songs when "favorites only" is specified', function() {
        // Create three songs, two of which are marked as favorites.
       var rockinSong = createSong('Rockin\' Around the Christmas Treehouse', 'The Yuletide Youth', true); 
       var shuffleSong = createSong('Santa\'s Sleigh Ride Shuffle', 'The Jolly Jinglesters')

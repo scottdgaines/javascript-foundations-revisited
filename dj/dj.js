@@ -34,10 +34,21 @@ const addSongToPlaylist = (playlist, newSong) => {
   return playlist
 }
 
-const playSongs = (playlist) => {
-  playlist.songs.forEach(song => {
-    song.hasBeenPlayed = true 
-  })
+const playSongs = (playlist, favoritesOn) => {
+
+  if (favoritesOn) {
+    playlist.songs.forEach(song => {
+      if (song.favorite) {
+        song.hasBeenPlayed = true
+      }
+    })
+  } else {
+    playlist.songs.forEach(song => {
+      song.hasBeenPlayed = true
+    })
+  }
+ 
+
   return playlist
 }
 
