@@ -26,7 +26,7 @@ describe('dj', function() {
    })
 
 
-   it.skip('should be able to play a song', function() {
+   it('should be able to play a song', function() {
       var song = createSong('I Put A Spell On You', 'Bette Midler, Sarah Jessica Parker & Kathy Najimy')
       
       assert.equal(song.name, 'I Put A Spell On You');
@@ -39,7 +39,7 @@ describe('dj', function() {
       assert.equal(playedSong.hasBeenPlayed, true);
    }) 
 
-   it.skip('should be able to create a playlist', function() {
+   it('should be able to create a playlist', function() {
       var skeletonSong = createSong('Skeletons in the Closet Rock', 'The Skeletal Band');
       var tangoTrack = createSong('Trick or Treat Tango', 'The Spooky Cats');
       
