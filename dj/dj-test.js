@@ -2,7 +2,7 @@ var { createSong, playSong, makePlaylist, addSongToPlaylist, playSongs, playFavo
 var assert = require('chai').assert;
 
 describe('dj', function() {
-   it.skip('should be able to create songs', function() {
+   it('should be able to create songs', function() {
       var song = createSong('Zombie Shuffle', 'The Creepy Crawlers', true)
       
       assert.equal(song.name, 'Zombie Shuffle');
@@ -10,7 +10,7 @@ describe('dj', function() {
       assert.equal(song.favorite, true);
    })
 
-   it.skip('should not have been played by default', function() {
+   it('should not have been played by default', function() {
       var song = createSong('Witches\' Brew Boogie', 'The Ghostly Ghouls', true)
       
       assert.equal(song.name, 'Witches\' Brew Boogie');
