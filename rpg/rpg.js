@@ -8,7 +8,8 @@ class Mage {
 class Enemy {
   constructor(name, health) {
     this.name = name, 
-    this.health = health
+    this.health = health,
+    this.alive = true
   }
 }
 
@@ -22,9 +23,14 @@ const createEnemy = (name, health) => {
   return enemy
 }
 
+const castSpell = (character) => {
+  character.magic = character.magic - 5
+  return `That spell cost 5 points. I have ${character.magic} magic points left!`
+}
+
 module.exports = {
   createMage,
   createEnemy,
-  // castSpell,
+  castSpell,
   // castUltimate
 }

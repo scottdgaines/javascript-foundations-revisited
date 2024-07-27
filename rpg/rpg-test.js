@@ -24,13 +24,13 @@ describe('rpg', function() {
     assert.equal(dragon.health, 100);
   });
 
-  it.skip('should create enemy that is alive by default', function() {
+  it('should create enemy that is alive by default', function() {
     var ghost = createEnemy('ghost', 40);
 
     assert.equal(ghost.alive, true);
   });
 
-  it.skip('should cost magic points in order to cast a spell', function() {
+  it('should cost magic points in order to cast a spell', function() {
     var mage = createMage(10, 20);
     var message = castSpell(mage)
 
