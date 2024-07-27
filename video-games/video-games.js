@@ -35,8 +35,19 @@ const findCoins = (level, count) => {
     return level
 }
 
+const defeatPlayer = (level) => {
+    level.lives = level.lives -1 
+   
+    if (level.lives > 0) {
+        return level
+    } else if (level.lives == 0) {
+        return 'GAME OVER'
+    }
+}
+
 module.exports = {
     createPlayer,
     createLevel,
-    findCoins
+    findCoins,
+    defeatPlayer
 };
