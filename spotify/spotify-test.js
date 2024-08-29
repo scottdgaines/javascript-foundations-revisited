@@ -22,7 +22,7 @@ describe('Spotify collections', function() {
         assert.deepEqual(emptyTrack, {title:'unknown',artist:'unknown',  duration:0, });
       })
 
-    it.skip('should only appreciate the talent of Red Hot Chili Peppers', function() {
+    it('should only appreciate the talent of Red Hot Chili Peppers', function() {
         var track1 = createTrack('Californication', 'Red Hot Chili Peppers', 321);
         var track2 = createTrack('Otherside', 'Red Hot Chili Peppers', 255);
         var track3 = createTrack('Beautiful Day', 'U2', 246);

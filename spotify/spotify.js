@@ -7,9 +7,9 @@ class Collection {
 }
 class Track {
   constructor(title, artist, duration) {
-    this.title = title,
-    this.duration = duration,
-    this.artist = artist
+    this.title = title ||  "unknown",
+    this.duration = duration || 0,
+    this.artist = artist || "unknown"
   }
 }
 

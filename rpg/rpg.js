@@ -23,9 +23,16 @@ const createEnemy = (name, health) => {
   return enemy
 }
 
-const castSpell = (character) => {
-  character.magic = character.magic - 5
-  return `That spell cost 5 points. I have ${character.magic} magic points left!`
+const castSpell = (mage, enemy) => {
+  if (mage.magic >= 5) {
+    mage.magic = mage.magic - 5
+    if (enemy) {
+      enemy.health = enemy.health - 20 
+    }
+    return `That spell cost 5 points. I have ${mage.magic} magic points left!`
+  } else if (mage.magic < 5) {
+    return 'I can\'t do that. I don\'t have any magic points left!'
+  }
 }
 
 module.exports = {

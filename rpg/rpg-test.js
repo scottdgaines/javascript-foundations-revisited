@@ -43,7 +43,7 @@ describe('rpg', function() {
     assert.equal(newMessage, 'That spell cost 5 points. I have 10 magic points left!');
   });
 
-  it.skip('should cause damage to enemy after casting a spell', function() {
+  it('should cause damage to enemy after casting a spell', function() {
     var mage = createMage(10, 20);
     var dragon = createEnemy('dragon', 100);
     var response = castSpell(mage, dragon);
@@ -53,7 +53,7 @@ describe('rpg', function() {
     assert.equal(response, 'That spell cost 5 points. I have 15 magic points left!')
   })
 
-  it.skip('should tell you if they do not have enough magic to cast a spell', function() {
+  it('should tell you if they do not have enough magic to cast a spell', function() {
     var mage = createMage(10, 5);
     var dragon = createEnemy('dragon', 100);
     var response = castSpell(mage, dragon);
