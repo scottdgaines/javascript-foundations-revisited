@@ -10,4 +10,16 @@ const createTape = (title, status) => {
     return newTape
 }
 
-module.exports = { createTape }
+const reset = (tape) => {
+    if (!tape.readyToPlay) {
+        tape.readyToPlay = true
+    }
+
+    return tape
+
+}
+
+module.exports = { 
+    createTape, 
+    reset 
+}

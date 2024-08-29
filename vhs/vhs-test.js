@@ -25,7 +25,7 @@ describe("Tape", function() {
     assert.equal(landBeforeTime.readyToPlay, false);
   })
 
-  it.skip("should be able to be readyToPlay", function() {
+  it("should be able to be readyToPlay", function() {
     var fargo = createTape("Fargo", false);
     var resetFargo = reset(fargo);
     var betterOffDead = createTape("Better Off Dead",true)
@@ -35,7 +35,7 @@ describe("Tape", function() {
     assert.equal(resetBetterOffDead.readyToPlay, true); 
   })
 
-  it.skip("should not reset if it has already been reset", function() {
+  it("should not reset if it has already been reset", function() {
     var betterOffDead = createTape("Better Off Dead",true)
     var resetBetterOffDead = reset(betterOffDead)
 
