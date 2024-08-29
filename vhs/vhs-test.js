@@ -9,7 +9,7 @@ describe("Tape", function() {
     assert.deepEqual(genericTape, {title:"", readyToPlay: false})
   })
 
-  it.skip("should have a title", function(){
+  it("should have a title", function(){
     var littleMermaid = createTape("The Little Mermaid", false)
     var landBeforeTime = createTape("The Land Before Time", false)
 
@@ -17,7 +17,7 @@ describe("Tape", function() {
     assert.equal(landBeforeTime.title,"The Land Before Time")
   })
 
-  it.skip("should have a readyToPlay status by default", function() {
+  it("should have a readyToPlay status by default", function() {
     var littleMermaid = createTape("The Little Mermaid");
     var landBeforeTime = createTape("The Land Before Time", false);
 

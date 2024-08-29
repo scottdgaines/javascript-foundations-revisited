@@ -1,7 +1,7 @@
 class Tape {
     constructor(title, status) {
         this.title = title,
-        this.readyToPlay = status
+        this.readyToPlay = status || false
     }
 }
 
