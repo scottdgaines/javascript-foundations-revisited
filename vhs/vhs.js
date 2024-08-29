@@ -16,10 +16,30 @@ const reset = (tape) => {
     }
 
     return tape
-
 }
+
+const createCollection = (tape1, tape2, tape3) => {
+    let collection
+    
+    if (tape1 || tape2 || tape3) {
+        collection = [tape1, tape2, tape3]
+        return collection
+    } else {
+        return 'Your collection is empty.'
+    }
+}
+
+const previewCollection = (collection) => {
+    const titles = collection.map(tape => {
+        return tape.title
+    })
+    return titles
+}
+
 
 module.exports = { 
     createTape, 
-    reset 
+    reset,
+    createCollection,
+    previewCollection
 }
